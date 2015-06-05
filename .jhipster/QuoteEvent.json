@@ -1,0 +1,758 @@
+{
+    "relationships": [],
+    "fields": [
+        {
+            "fieldId": 1,
+            "fieldName": "ask",
+            "fieldType": "BigDecimal",
+            "fieldNameCapitalized": "Ask",
+            "fieldNameUnderscored": "ask",
+            "fieldInJavaBeanMethod": "Ask",
+            "fieldValidate": false
+        },
+        {
+            "fieldId": 2,
+            "fieldName": "averageDailyVolume",
+            "fieldType": "String",
+            "fieldNameCapitalized": "AverageDailyVolume",
+            "fieldNameUnderscored": "average_daily_volume",
+            "fieldInJavaBeanMethod": "AverageDailyVolume",
+            "fieldValidate": false
+        },
+        {
+            "fieldId": 3,
+            "fieldName": "bid",
+            "fieldType": "String",
+            "fieldNameCapitalized": "Bid",
+            "fieldNameUnderscored": "bid",
+            "fieldInJavaBeanMethod": "Bid",
+            "fieldValidate": false
+        },
+        {
+            "fieldId": 4,
+            "fieldName": "askRealtime",
+            "fieldType": "String",
+            "fieldNameCapitalized": "AskRealtime",
+            "fieldNameUnderscored": "ask_realtime",
+            "fieldInJavaBeanMethod": "AskRealtime",
+            "fieldValidate": false
+        },
+        {
+            "fieldId": 5,
+            "fieldName": "bidRealtime",
+            "fieldType": "String",
+            "fieldNameCapitalized": "BidRealtime",
+            "fieldNameUnderscored": "bid_realtime",
+            "fieldInJavaBeanMethod": "BidRealtime",
+            "fieldValidate": false
+        },
+        {
+            "fieldId": 6,
+            "fieldName": "bookValue",
+            "fieldType": "String",
+            "fieldNameCapitalized": "BookValue",
+            "fieldNameUnderscored": "book_value",
+            "fieldInJavaBeanMethod": "BookValue",
+            "fieldValidate": false
+        },
+        {
+            "fieldId": 7,
+            "fieldName": "change_PercentChange",
+            "fieldType": "String",
+            "fieldNameCapitalized": "Change_PercentChange",
+            "fieldNameUnderscored": "change_percent_change",
+            "fieldInJavaBeanMethod": "Change_PercentChange",
+            "fieldValidate": false
+        },
+        {
+            "fieldId": 8,
+            "fieldName": "change",
+            "fieldType": "BigDecimal",
+            "fieldNameCapitalized": "Change",
+            "fieldNameUnderscored": "change",
+            "fieldInJavaBeanMethod": "Change",
+            "fieldValidate": false
+        },
+        {
+            "fieldId": 9,
+            "fieldName": "commission",
+            "fieldType": "String",
+            "fieldNameCapitalized": "Commission",
+            "fieldNameUnderscored": "commission",
+            "fieldInJavaBeanMethod": "Commission",
+            "fieldValidate": false
+        },
+        {
+            "fieldId": 10,
+            "fieldName": "currency",
+            "fieldType": "String",
+            "fieldNameCapitalized": "Currency",
+            "fieldNameUnderscored": "currency",
+            "fieldInJavaBeanMethod": "Currency",
+            "fieldValidate": false
+        },
+        {
+            "fieldId": 11,
+            "fieldName": "changeRealtime",
+            "fieldType": "String",
+            "fieldNameCapitalized": "ChangeRealtime",
+            "fieldNameUnderscored": "change_realtime",
+            "fieldInJavaBeanMethod": "ChangeRealtime",
+            "fieldValidate": false
+        },
+        {
+            "fieldId": 12,
+            "fieldName": "afterHoursChangeRealtime",
+            "fieldType": "String",
+            "fieldNameCapitalized": "AfterHoursChangeRealtime",
+            "fieldNameUnderscored": "after_hours_change_realtime",
+            "fieldInJavaBeanMethod": "AfterHoursChangeRealtime",
+            "fieldValidate": false
+        },
+        {
+            "fieldId": 13,
+            "fieldName": "dividendShare",
+            "fieldType": "String",
+            "fieldNameCapitalized": "DividendShare",
+            "fieldNameUnderscored": "dividend_share",
+            "fieldInJavaBeanMethod": "DividendShare",
+            "fieldValidate": false
+        },
+        {
+            "fieldId": 14,
+            "fieldName": "lastTradeDate",
+            "fieldType": "String",
+            "fieldNameCapitalized": "LastTradeDate",
+            "fieldNameUnderscored": "last_trade_date",
+            "fieldInJavaBeanMethod": "LastTradeDate",
+            "fieldValidate": false
+        },
+        {
+            "fieldId": 15,
+            "fieldName": "tradeDate",
+            "fieldType": "String",
+            "fieldNameCapitalized": "TradeDate",
+            "fieldNameUnderscored": "trade_date",
+            "fieldInJavaBeanMethod": "TradeDate",
+            "fieldValidate": false
+        },
+        {
+            "fieldId": 16,
+            "fieldName": "earningsShare",
+            "fieldType": "String",
+            "fieldNameCapitalized": "EarningsShare",
+            "fieldNameUnderscored": "earnings_share",
+            "fieldInJavaBeanMethod": "EarningsShare",
+            "fieldValidate": false
+        },
+        {
+            "fieldId": 17,
+            "fieldName": "errorIndicationreturnedforsymbolchangedinvalid",
+            "fieldType": "String",
+            "fieldNameCapitalized": "ErrorIndicationreturnedforsymbolchangedinvalid",
+            "fieldNameUnderscored": "error_indicationreturnedforsymbolchangedinvalid",
+            "fieldInJavaBeanMethod": "ErrorIndicationreturnedforsymbolchangedinvalid",
+            "fieldValidate": false
+        },
+        {
+            "fieldId": 18,
+            "fieldName": "ePSEstimateCurrentYear",
+            "fieldType": "String",
+            "fieldNameCapitalized": "EPSEstimateCurrentYear",
+            "fieldNameUnderscored": "e_p_s_estimate_current_year",
+            "fieldInJavaBeanMethod": "EPSEstimateCurrentYear",
+            "fieldValidate": false
+        },
+        {
+            "fieldId": 19,
+            "fieldName": "ePSEstimateNextYear",
+            "fieldType": "String",
+            "fieldNameCapitalized": "EPSEstimateNextYear",
+            "fieldNameUnderscored": "e_p_s_estimate_next_year",
+            "fieldInJavaBeanMethod": "EPSEstimateNextYear",
+            "fieldValidate": false
+        },
+        {
+            "fieldId": 20,
+            "fieldName": "ePSEstimateNextQuarter",
+            "fieldType": "String",
+            "fieldNameCapitalized": "EPSEstimateNextQuarter",
+            "fieldNameUnderscored": "e_p_s_estimate_next_quarter",
+            "fieldInJavaBeanMethod": "EPSEstimateNextQuarter",
+            "fieldValidate": false
+        },
+        {
+            "fieldId": 21,
+            "fieldName": "daysLow",
+            "fieldType": "String",
+            "fieldNameCapitalized": "DaysLow",
+            "fieldNameUnderscored": "days_low",
+            "fieldInJavaBeanMethod": "DaysLow",
+            "fieldValidate": false
+        },
+        {
+            "fieldId": 22,
+            "fieldName": "daysHigh",
+            "fieldType": "String",
+            "fieldNameCapitalized": "DaysHigh",
+            "fieldNameUnderscored": "days_high",
+            "fieldInJavaBeanMethod": "DaysHigh",
+            "fieldValidate": false
+        },
+        {
+            "fieldId": 23,
+            "fieldName": "yearLow",
+            "fieldType": "String",
+            "fieldNameCapitalized": "YearLow",
+            "fieldNameUnderscored": "year_low",
+            "fieldInJavaBeanMethod": "YearLow",
+            "fieldValidate": false
+        },
+        {
+            "fieldId": 24,
+            "fieldName": "yearHigh",
+            "fieldType": "String",
+            "fieldNameCapitalized": "YearHigh",
+            "fieldNameUnderscored": "year_high",
+            "fieldInJavaBeanMethod": "YearHigh",
+            "fieldValidate": false
+        },
+        {
+            "fieldId": 25,
+            "fieldName": "holdingsGainPercent",
+            "fieldType": "String",
+            "fieldNameCapitalized": "HoldingsGainPercent",
+            "fieldNameUnderscored": "holdings_gain_percent",
+            "fieldInJavaBeanMethod": "HoldingsGainPercent",
+            "fieldValidate": false
+        },
+        {
+            "fieldId": 26,
+            "fieldName": "annualizedGain",
+            "fieldType": "String",
+            "fieldNameCapitalized": "AnnualizedGain",
+            "fieldNameUnderscored": "annualized_gain",
+            "fieldInJavaBeanMethod": "AnnualizedGain",
+            "fieldValidate": false
+        },
+        {
+            "fieldId": 27,
+            "fieldName": "holdingsGain",
+            "fieldType": "String",
+            "fieldNameCapitalized": "HoldingsGain",
+            "fieldNameUnderscored": "holdings_gain",
+            "fieldInJavaBeanMethod": "HoldingsGain",
+            "fieldValidate": false
+        },
+        {
+            "fieldId": 28,
+            "fieldName": "holdingsGainPercentRealtime",
+            "fieldType": "String",
+            "fieldNameCapitalized": "HoldingsGainPercentRealtime",
+            "fieldNameUnderscored": "holdings_gain_percent_realtime",
+            "fieldInJavaBeanMethod": "HoldingsGainPercentRealtime",
+            "fieldValidate": false
+        },
+        {
+            "fieldId": 29,
+            "fieldName": "holdingsGainRealtime",
+            "fieldType": "String",
+            "fieldNameCapitalized": "HoldingsGainRealtime",
+            "fieldNameUnderscored": "holdings_gain_realtime",
+            "fieldInJavaBeanMethod": "HoldingsGainRealtime",
+            "fieldValidate": false
+        },
+        {
+            "fieldId": 30,
+            "fieldName": "moreInfo",
+            "fieldType": "String",
+            "fieldNameCapitalized": "MoreInfo",
+            "fieldNameUnderscored": "more_info",
+            "fieldInJavaBeanMethod": "MoreInfo",
+            "fieldValidate": false
+        },
+        {
+            "fieldId": 31,
+            "fieldName": "orderBookRealtime",
+            "fieldType": "String",
+            "fieldNameCapitalized": "OrderBookRealtime",
+            "fieldNameUnderscored": "order_book_realtime",
+            "fieldInJavaBeanMethod": "OrderBookRealtime",
+            "fieldValidate": false
+        },
+        {
+            "fieldId": 32,
+            "fieldName": "marketCapitalization",
+            "fieldType": "String",
+            "fieldNameCapitalized": "MarketCapitalization",
+            "fieldNameUnderscored": "market_capitalization",
+            "fieldInJavaBeanMethod": "MarketCapitalization",
+            "fieldValidate": false
+        },
+        {
+            "fieldId": 33,
+            "fieldName": "marketCapRealtime",
+            "fieldType": "String",
+            "fieldNameCapitalized": "MarketCapRealtime",
+            "fieldNameUnderscored": "market_cap_realtime",
+            "fieldInJavaBeanMethod": "MarketCapRealtime",
+            "fieldValidate": false
+        },
+        {
+            "fieldId": 34,
+            "fieldName": "eBITDA",
+            "fieldType": "String",
+            "fieldNameCapitalized": "EBITDA",
+            "fieldNameUnderscored": "ebitda",
+            "fieldInJavaBeanMethod": "EBITDA",
+            "fieldValidate": false
+        },
+        {
+            "fieldId": 35,
+            "fieldName": "changeFromYearLow",
+            "fieldType": "String",
+            "fieldNameCapitalized": "ChangeFromYearLow",
+            "fieldNameUnderscored": "change_from_year_low",
+            "fieldInJavaBeanMethod": "ChangeFromYearLow",
+            "fieldValidate": false
+        },
+        {
+            "fieldId": 36,
+            "fieldName": "percentChangeFromYearLow",
+            "fieldType": "String",
+            "fieldNameCapitalized": "PercentChangeFromYearLow",
+            "fieldNameUnderscored": "percent_change_from_year_low",
+            "fieldInJavaBeanMethod": "PercentChangeFromYearLow",
+            "fieldValidate": false
+        },
+        {
+            "fieldId": 37,
+            "fieldName": "lastTradeRealtimeWithTime",
+            "fieldType": "String",
+            "fieldNameCapitalized": "LastTradeRealtimeWithTime",
+            "fieldNameUnderscored": "last_trade_realtime_with_time",
+            "fieldInJavaBeanMethod": "LastTradeRealtimeWithTime",
+            "fieldValidate": false
+        },
+        {
+            "fieldId": 38,
+            "fieldName": "changePercentRealtime",
+            "fieldType": "String",
+            "fieldNameCapitalized": "ChangePercentRealtime",
+            "fieldNameUnderscored": "change_percent_realtime",
+            "fieldInJavaBeanMethod": "ChangePercentRealtime",
+            "fieldValidate": false
+        },
+        {
+            "fieldId": 39,
+            "fieldName": "changeFromYearHigh",
+            "fieldType": "String",
+            "fieldNameCapitalized": "ChangeFromYearHigh",
+            "fieldNameUnderscored": "change_from_year_high",
+            "fieldInJavaBeanMethod": "ChangeFromYearHigh",
+            "fieldValidate": false
+        },
+        {
+            "fieldId": 40,
+            "fieldName": "percebtChangeFromYearHigh",
+            "fieldType": "String",
+            "fieldNameCapitalized": "PercebtChangeFromYearHigh",
+            "fieldNameUnderscored": "percebt_change_from_year_high",
+            "fieldInJavaBeanMethod": "PercebtChangeFromYearHigh",
+            "fieldValidate": false
+        },
+        {
+            "fieldId": 41,
+            "fieldName": "lastTradeWithTime",
+            "fieldType": "String",
+            "fieldNameCapitalized": "LastTradeWithTime",
+            "fieldNameUnderscored": "last_trade_with_time",
+            "fieldInJavaBeanMethod": "LastTradeWithTime",
+            "fieldValidate": false
+        },
+        {
+            "fieldId": 42,
+            "fieldName": "lastTradePriceOnly",
+            "fieldType": "String",
+            "fieldNameCapitalized": "LastTradePriceOnly",
+            "fieldNameUnderscored": "last_trade_price_only",
+            "fieldInJavaBeanMethod": "LastTradePriceOnly",
+            "fieldValidate": false
+        },
+        {
+            "fieldId": 43,
+            "fieldName": "highLimit",
+            "fieldType": "String",
+            "fieldNameCapitalized": "HighLimit",
+            "fieldNameUnderscored": "high_limit",
+            "fieldInJavaBeanMethod": "HighLimit",
+            "fieldValidate": false
+        },
+        {
+            "fieldId": 44,
+            "fieldName": "lowLimit",
+            "fieldType": "String",
+            "fieldNameCapitalized": "LowLimit",
+            "fieldNameUnderscored": "low_limit",
+            "fieldInJavaBeanMethod": "LowLimit",
+            "fieldValidate": false
+        },
+        {
+            "fieldId": 45,
+            "fieldName": "daysRange",
+            "fieldType": "String",
+            "fieldNameCapitalized": "DaysRange",
+            "fieldNameUnderscored": "days_range",
+            "fieldInJavaBeanMethod": "DaysRange",
+            "fieldValidate": false
+        },
+        {
+            "fieldId": 46,
+            "fieldName": "daysRangeRealtime",
+            "fieldType": "String",
+            "fieldNameCapitalized": "DaysRangeRealtime",
+            "fieldNameUnderscored": "days_range_realtime",
+            "fieldInJavaBeanMethod": "DaysRangeRealtime",
+            "fieldValidate": false
+        },
+        {
+            "fieldId": 47,
+            "fieldName": "fiftydayMovingAverage",
+            "fieldType": "String",
+            "fieldNameCapitalized": "FiftydayMovingAverage",
+            "fieldNameUnderscored": "fiftyday_moving_average",
+            "fieldInJavaBeanMethod": "FiftydayMovingAverage",
+            "fieldValidate": false
+        },
+        {
+            "fieldId": 48,
+            "fieldName": "twoHundreddayMovingAverage",
+            "fieldType": "String",
+            "fieldNameCapitalized": "TwoHundreddayMovingAverage",
+            "fieldNameUnderscored": "two_hundredday_moving_average",
+            "fieldInJavaBeanMethod": "TwoHundreddayMovingAverage",
+            "fieldValidate": false
+        },
+        {
+            "fieldId": 49,
+            "fieldName": "changeFromTwoHundreddayMovingAverage",
+            "fieldType": "String",
+            "fieldNameCapitalized": "ChangeFromTwoHundreddayMovingAverage",
+            "fieldNameUnderscored": "change_from_two_hundredday_moving_average",
+            "fieldInJavaBeanMethod": "ChangeFromTwoHundreddayMovingAverage",
+            "fieldValidate": false
+        },
+        {
+            "fieldId": 50,
+            "fieldName": "percentChangeFromTwoHundreddayMovingAverage",
+            "fieldType": "String",
+            "fieldNameCapitalized": "PercentChangeFromTwoHundreddayMovingAverage",
+            "fieldNameUnderscored": "percent_change_from_two_hundredday_moving_average",
+            "fieldInJavaBeanMethod": "PercentChangeFromTwoHundreddayMovingAverage",
+            "fieldValidate": false
+        },
+        {
+            "fieldId": 51,
+            "fieldName": "changeFromFiftydayMovingAverage",
+            "fieldType": "String",
+            "fieldNameCapitalized": "ChangeFromFiftydayMovingAverage",
+            "fieldNameUnderscored": "change_from_fiftyday_moving_average",
+            "fieldInJavaBeanMethod": "ChangeFromFiftydayMovingAverage",
+            "fieldValidate": false
+        },
+        {
+            "fieldId": 52,
+            "fieldName": "percentChangeFromFiftydayMovingAverage",
+            "fieldType": "String",
+            "fieldNameCapitalized": "PercentChangeFromFiftydayMovingAverage",
+            "fieldNameUnderscored": "percent_change_from_fiftyday_moving_average",
+            "fieldInJavaBeanMethod": "PercentChangeFromFiftydayMovingAverage",
+            "fieldValidate": false
+        },
+        {
+            "fieldId": 53,
+            "fieldName": "name",
+            "fieldType": "String",
+            "fieldNameCapitalized": "Name",
+            "fieldNameUnderscored": "name",
+            "fieldInJavaBeanMethod": "Name",
+            "fieldValidate": false
+        },
+        {
+            "fieldId": 54,
+            "fieldName": "notes",
+            "fieldType": "String",
+            "fieldNameCapitalized": "Notes",
+            "fieldNameUnderscored": "notes",
+            "fieldInJavaBeanMethod": "Notes",
+            "fieldValidate": false
+        },
+        {
+            "fieldId": 55,
+            "fieldName": "open",
+            "fieldType": "String",
+            "fieldNameCapitalized": "Open",
+            "fieldNameUnderscored": "open",
+            "fieldInJavaBeanMethod": "Open",
+            "fieldValidate": false
+        },
+        {
+            "fieldId": 56,
+            "fieldName": "previousClose",
+            "fieldType": "String",
+            "fieldNameCapitalized": "PreviousClose",
+            "fieldNameUnderscored": "previous_close",
+            "fieldInJavaBeanMethod": "PreviousClose",
+            "fieldValidate": false
+        },
+        {
+            "fieldId": 57,
+            "fieldName": "pricePaid",
+            "fieldType": "String",
+            "fieldNameCapitalized": "PricePaid",
+            "fieldNameUnderscored": "price_paid",
+            "fieldInJavaBeanMethod": "PricePaid",
+            "fieldValidate": false
+        },
+        {
+            "fieldId": 58,
+            "fieldName": "changeinPercent",
+            "fieldType": "String",
+            "fieldNameCapitalized": "ChangeinPercent",
+            "fieldNameUnderscored": "changein_percent",
+            "fieldInJavaBeanMethod": "ChangeinPercent",
+            "fieldValidate": false
+        },
+        {
+            "fieldId": 59,
+            "fieldName": "priceSales",
+            "fieldType": "String",
+            "fieldNameCapitalized": "PriceSales",
+            "fieldNameUnderscored": "price_sales",
+            "fieldInJavaBeanMethod": "PriceSales",
+            "fieldValidate": false
+        },
+        {
+            "fieldId": 60,
+            "fieldName": "priceBook",
+            "fieldType": "String",
+            "fieldNameCapitalized": "PriceBook",
+            "fieldNameUnderscored": "price_book",
+            "fieldInJavaBeanMethod": "PriceBook",
+            "fieldValidate": false
+        },
+        {
+            "fieldId": 61,
+            "fieldName": "exDividendDate",
+            "fieldType": "String",
+            "fieldNameCapitalized": "ExDividendDate",
+            "fieldNameUnderscored": "ex_dividend_date",
+            "fieldInJavaBeanMethod": "ExDividendDate",
+            "fieldValidate": false
+        },
+        {
+            "fieldId": 62,
+            "fieldName": "pERatio",
+            "fieldType": "String",
+            "fieldNameCapitalized": "PERatio",
+            "fieldNameUnderscored": "p_e_ratio",
+            "fieldInJavaBeanMethod": "PERatio",
+            "fieldValidate": false
+        },
+        {
+            "fieldId": 63,
+            "fieldName": "dividendPayDate",
+            "fieldType": "String",
+            "fieldNameCapitalized": "DividendPayDate",
+            "fieldNameUnderscored": "dividend_pay_date",
+            "fieldInJavaBeanMethod": "DividendPayDate",
+            "fieldValidate": false
+        },
+        {
+            "fieldId": 64,
+            "fieldName": "pERatioRealtime",
+            "fieldType": "String",
+            "fieldNameCapitalized": "PERatioRealtime",
+            "fieldNameUnderscored": "p_e_ratio_realtime",
+            "fieldInJavaBeanMethod": "PERatioRealtime",
+            "fieldValidate": false
+        },
+        {
+            "fieldId": 65,
+            "fieldName": "pEGRatio",
+            "fieldType": "String",
+            "fieldNameCapitalized": "PEGRatio",
+            "fieldNameUnderscored": "p_e_g_ratio",
+            "fieldInJavaBeanMethod": "PEGRatio",
+            "fieldValidate": false
+        },
+        {
+            "fieldId": 66,
+            "fieldName": "priceEPSEstimateCurrentYear",
+            "fieldType": "String",
+            "fieldNameCapitalized": "PriceEPSEstimateCurrentYear",
+            "fieldNameUnderscored": "price_e_p_s_estimate_current_year",
+            "fieldInJavaBeanMethod": "PriceEPSEstimateCurrentYear",
+            "fieldValidate": false
+        },
+        {
+            "fieldId": 67,
+            "fieldName": "priceEPSEstimateNextYear",
+            "fieldType": "String",
+            "fieldNameCapitalized": "PriceEPSEstimateNextYear",
+            "fieldNameUnderscored": "price_e_p_s_estimate_next_year",
+            "fieldInJavaBeanMethod": "PriceEPSEstimateNextYear",
+            "fieldValidate": false
+        },
+        {
+            "fieldId": 68,
+            "fieldName": "symbol",
+            "fieldType": "String",
+            "fieldNameCapitalized": "Symbol",
+            "fieldNameUnderscored": "symbol",
+            "fieldInJavaBeanMethod": "Symbol",
+            "fieldValidate": true,
+            "fieldValidateRules": [
+                "required"
+            ]
+        },
+        {
+            "fieldId": 69,
+            "fieldName": "sharesOwned",
+            "fieldType": "String",
+            "fieldNameCapitalized": "SharesOwned",
+            "fieldNameUnderscored": "shares_owned",
+            "fieldInJavaBeanMethod": "SharesOwned",
+            "fieldValidate": false
+        },
+        {
+            "fieldId": 70,
+            "fieldName": "shortRatio",
+            "fieldType": "String",
+            "fieldNameCapitalized": "ShortRatio",
+            "fieldNameUnderscored": "short_ratio",
+            "fieldInJavaBeanMethod": "ShortRatio",
+            "fieldValidate": false
+        },
+        {
+            "fieldId": 71,
+            "fieldName": "lastTradeTime",
+            "fieldType": "String",
+            "fieldNameCapitalized": "LastTradeTime",
+            "fieldNameUnderscored": "last_trade_time",
+            "fieldInJavaBeanMethod": "LastTradeTime",
+            "fieldValidate": false
+        },
+        {
+            "fieldId": 72,
+            "fieldName": "tickerTrend",
+            "fieldType": "String",
+            "fieldNameCapitalized": "TickerTrend",
+            "fieldNameUnderscored": "ticker_trend",
+            "fieldInJavaBeanMethod": "TickerTrend",
+            "fieldValidate": false
+        },
+        {
+            "fieldId": 73,
+            "fieldName": "oneyrTargetPrice",
+            "fieldType": "String",
+            "fieldNameCapitalized": "OneyrTargetPrice",
+            "fieldNameUnderscored": "oneyr_target_price",
+            "fieldInJavaBeanMethod": "OneyrTargetPrice",
+            "fieldValidate": false
+        },
+        {
+            "fieldId": 74,
+            "fieldName": "volume",
+            "fieldType": "String",
+            "fieldNameCapitalized": "Volume",
+            "fieldNameUnderscored": "volume",
+            "fieldInJavaBeanMethod": "Volume",
+            "fieldValidate": false
+        },
+        {
+            "fieldId": 75,
+            "fieldName": "holdingsValue",
+            "fieldType": "String",
+            "fieldNameCapitalized": "HoldingsValue",
+            "fieldNameUnderscored": "holdings_value",
+            "fieldInJavaBeanMethod": "HoldingsValue",
+            "fieldValidate": false
+        },
+        {
+            "fieldId": 76,
+            "fieldName": "holdingsValueRealtime",
+            "fieldType": "String",
+            "fieldNameCapitalized": "HoldingsValueRealtime",
+            "fieldNameUnderscored": "holdings_value_realtime",
+            "fieldInJavaBeanMethod": "HoldingsValueRealtime",
+            "fieldValidate": false
+        },
+        {
+            "fieldId": 77,
+            "fieldName": "yearRange",
+            "fieldType": "String",
+            "fieldNameCapitalized": "YearRange",
+            "fieldNameUnderscored": "year_range",
+            "fieldInJavaBeanMethod": "YearRange",
+            "fieldValidate": false
+        },
+        {
+            "fieldId": 78,
+            "fieldName": "daysValueChange",
+            "fieldType": "String",
+            "fieldNameCapitalized": "DaysValueChange",
+            "fieldNameUnderscored": "days_value_change",
+            "fieldInJavaBeanMethod": "DaysValueChange",
+            "fieldValidate": false
+        },
+        {
+            "fieldId": 79,
+            "fieldName": "daysValueChangeRealtime",
+            "fieldType": "String",
+            "fieldNameCapitalized": "DaysValueChangeRealtime",
+            "fieldNameUnderscored": "days_value_change_realtime",
+            "fieldInJavaBeanMethod": "DaysValueChangeRealtime",
+            "fieldValidate": false
+        },
+        {
+            "fieldId": 80,
+            "fieldName": "stockExchange",
+            "fieldType": "String",
+            "fieldNameCapitalized": "StockExchange",
+            "fieldNameUnderscored": "stock_exchange",
+            "fieldInJavaBeanMethod": "StockExchange",
+            "fieldValidate": false
+        },
+        {
+            "fieldId": 81,
+            "fieldName": "dividendYield",
+            "fieldType": "String",
+            "fieldNameCapitalized": "DividendYield",
+            "fieldNameUnderscored": "dividend_yield",
+            "fieldInJavaBeanMethod": "DividendYield",
+            "fieldValidate": false
+        },
+        {
+            "fieldId": 82,
+            "fieldName": "percentChange",
+            "fieldType": "String",
+            "fieldNameCapitalized": "PercentChange",
+            "fieldNameUnderscored": "percent_change",
+            "fieldInJavaBeanMethod": "PercentChange",
+            "fieldValidate": false
+        }
+    ],
+    "fieldsContainOwnerManyToMany": false,
+    "fieldsContainOwnerOneToOne": false,
+    "fieldsContainOneToMany": false,
+    "fieldsContainLocalDate": false,
+    "fieldsContainCustomTime": false,
+    "fieldsContainBigDecimal": false,
+    "fieldsContainDateTime": false,
+    "fieldsContainDate": false,
+    "changelogDate": "20150605064853",
+    "dto": "mapstruct",
+    "pagination": "pagination",
+    "validation": true
+}

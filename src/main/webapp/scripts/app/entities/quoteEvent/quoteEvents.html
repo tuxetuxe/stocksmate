@@ -1,0 +1,789 @@
+<div>
+
+    <h2 translate="stocksmateApp.quoteEvent.home.title">QuoteEvents</h2>
+
+    <div class="container">
+        <div class="row">
+            <div class="col-md-4">
+                <button class="btn btn-primary" data-toggle="modal" data-target="#saveQuoteEventModal" ng-click="clear()">
+                    <span class="glyphicon glyphicon-flash"></span> <span translate="stocksmateApp.quoteEvent.home.createLabel">Create a new QuoteEvent</span>
+                </button>
+            </div>
+            <div class="col-md-8">
+                <form name="searchForm" class="form-inline">
+                    <div class="form-group">
+                        <input type="text" class="form-control" ng-model="searchQuery" id="searchQuery" placeholder="query">
+                    </div>
+                    <button class="btn btn-info" ng-click="search()"><span class="glyphicon glyphicon-search"></span> <span>Search a QuoteEvent</span>
+                    </button>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal fade" id="saveQuoteEventModal" tabindex="-1" role="dialog" aria-labelledby="myQuoteEventLabel"
+         aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <form name="editForm" role="form" novalidate ng-submit="save()" show-validation>
+
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal" aria-hidden="true"
+                                ng-click="clear()">&times;</button>
+                        <h4 class="modal-title" id="myQuoteEventLabel" translate="stocksmateApp.quoteEvent.home.createOrEditLabel">Create or edit a QuoteEvent</h4>
+                    </div>
+                    <div class="modal-body">
+                        <div class="form-group">
+                            <label>ID</label>
+                            <input type="text" class="form-control" name="id"
+                                   ng-model="quoteEvent.id" readonly>
+                        </div>
+
+                        <div class="form-group">
+                            <label translate="stocksmateApp.quoteEvent.ask">Ask</label>
+                            <input type="number" class="form-control" name="ask"
+                                   ng-model="quoteEvent.ask">
+
+                        </div>
+                        <div class="form-group">
+                            <label translate="stocksmateApp.quoteEvent.averageDailyVolume">AverageDailyVolume</label>
+                            <input type="text" class="form-control" name="averageDailyVolume"
+                                   ng-model="quoteEvent.averageDailyVolume">
+
+                        </div>
+                        <div class="form-group">
+                            <label translate="stocksmateApp.quoteEvent.bid">Bid</label>
+                            <input type="text" class="form-control" name="bid"
+                                   ng-model="quoteEvent.bid">
+
+                        </div>
+                        <div class="form-group">
+                            <label translate="stocksmateApp.quoteEvent.askRealtime">AskRealtime</label>
+                            <input type="text" class="form-control" name="askRealtime"
+                                   ng-model="quoteEvent.askRealtime">
+
+                        </div>
+                        <div class="form-group">
+                            <label translate="stocksmateApp.quoteEvent.bidRealtime">BidRealtime</label>
+                            <input type="text" class="form-control" name="bidRealtime"
+                                   ng-model="quoteEvent.bidRealtime">
+
+                        </div>
+                        <div class="form-group">
+                            <label translate="stocksmateApp.quoteEvent.bookValue">BookValue</label>
+                            <input type="text" class="form-control" name="bookValue"
+                                   ng-model="quoteEvent.bookValue">
+
+                        </div>
+                        <div class="form-group">
+                            <label translate="stocksmateApp.quoteEvent.change_PercentChange">Change_PercentChange</label>
+                            <input type="text" class="form-control" name="change_PercentChange"
+                                   ng-model="quoteEvent.change_PercentChange">
+
+                        </div>
+                        <div class="form-group">
+                            <label translate="stocksmateApp.quoteEvent.change">Change</label>
+                            <input type="number" class="form-control" name="change"
+                                   ng-model="quoteEvent.change">
+
+                        </div>
+                        <div class="form-group">
+                            <label translate="stocksmateApp.quoteEvent.commission">Commission</label>
+                            <input type="text" class="form-control" name="commission"
+                                   ng-model="quoteEvent.commission">
+
+                        </div>
+                        <div class="form-group">
+                            <label translate="stocksmateApp.quoteEvent.currency">Currency</label>
+                            <input type="text" class="form-control" name="currency"
+                                   ng-model="quoteEvent.currency">
+
+                        </div>
+                        <div class="form-group">
+                            <label translate="stocksmateApp.quoteEvent.changeRealtime">ChangeRealtime</label>
+                            <input type="text" class="form-control" name="changeRealtime"
+                                   ng-model="quoteEvent.changeRealtime">
+
+                        </div>
+                        <div class="form-group">
+                            <label translate="stocksmateApp.quoteEvent.afterHoursChangeRealtime">AfterHoursChangeRealtime</label>
+                            <input type="text" class="form-control" name="afterHoursChangeRealtime"
+                                   ng-model="quoteEvent.afterHoursChangeRealtime">
+
+                        </div>
+                        <div class="form-group">
+                            <label translate="stocksmateApp.quoteEvent.dividendShare">DividendShare</label>
+                            <input type="text" class="form-control" name="dividendShare"
+                                   ng-model="quoteEvent.dividendShare">
+
+                        </div>
+                        <div class="form-group">
+                            <label translate="stocksmateApp.quoteEvent.lastTradeDate">LastTradeDate</label>
+                            <input type="text" class="form-control" name="lastTradeDate"
+                                   ng-model="quoteEvent.lastTradeDate">
+
+                        </div>
+                        <div class="form-group">
+                            <label translate="stocksmateApp.quoteEvent.tradeDate">TradeDate</label>
+                            <input type="text" class="form-control" name="tradeDate"
+                                   ng-model="quoteEvent.tradeDate">
+
+                        </div>
+                        <div class="form-group">
+                            <label translate="stocksmateApp.quoteEvent.earningsShare">EarningsShare</label>
+                            <input type="text" class="form-control" name="earningsShare"
+                                   ng-model="quoteEvent.earningsShare">
+
+                        </div>
+                        <div class="form-group">
+                            <label translate="stocksmateApp.quoteEvent.errorIndicationreturnedforsymbolchangedinvalid">ErrorIndicationreturnedforsymbolchangedinvalid</label>
+                            <input type="text" class="form-control" name="errorIndicationreturnedforsymbolchangedinvalid"
+                                   ng-model="quoteEvent.errorIndicationreturnedforsymbolchangedinvalid">
+
+                        </div>
+                        <div class="form-group">
+                            <label translate="stocksmateApp.quoteEvent.ePSEstimateCurrentYear">EPSEstimateCurrentYear</label>
+                            <input type="text" class="form-control" name="ePSEstimateCurrentYear"
+                                   ng-model="quoteEvent.ePSEstimateCurrentYear">
+
+                        </div>
+                        <div class="form-group">
+                            <label translate="stocksmateApp.quoteEvent.ePSEstimateNextYear">EPSEstimateNextYear</label>
+                            <input type="text" class="form-control" name="ePSEstimateNextYear"
+                                   ng-model="quoteEvent.ePSEstimateNextYear">
+
+                        </div>
+                        <div class="form-group">
+                            <label translate="stocksmateApp.quoteEvent.ePSEstimateNextQuarter">EPSEstimateNextQuarter</label>
+                            <input type="text" class="form-control" name="ePSEstimateNextQuarter"
+                                   ng-model="quoteEvent.ePSEstimateNextQuarter">
+
+                        </div>
+                        <div class="form-group">
+                            <label translate="stocksmateApp.quoteEvent.daysLow">DaysLow</label>
+                            <input type="text" class="form-control" name="daysLow"
+                                   ng-model="quoteEvent.daysLow">
+
+                        </div>
+                        <div class="form-group">
+                            <label translate="stocksmateApp.quoteEvent.daysHigh">DaysHigh</label>
+                            <input type="text" class="form-control" name="daysHigh"
+                                   ng-model="quoteEvent.daysHigh">
+
+                        </div>
+                        <div class="form-group">
+                            <label translate="stocksmateApp.quoteEvent.yearLow">YearLow</label>
+                            <input type="text" class="form-control" name="yearLow"
+                                   ng-model="quoteEvent.yearLow">
+
+                        </div>
+                        <div class="form-group">
+                            <label translate="stocksmateApp.quoteEvent.yearHigh">YearHigh</label>
+                            <input type="text" class="form-control" name="yearHigh"
+                                   ng-model="quoteEvent.yearHigh">
+
+                        </div>
+                        <div class="form-group">
+                            <label translate="stocksmateApp.quoteEvent.holdingsGainPercent">HoldingsGainPercent</label>
+                            <input type="text" class="form-control" name="holdingsGainPercent"
+                                   ng-model="quoteEvent.holdingsGainPercent">
+
+                        </div>
+                        <div class="form-group">
+                            <label translate="stocksmateApp.quoteEvent.annualizedGain">AnnualizedGain</label>
+                            <input type="text" class="form-control" name="annualizedGain"
+                                   ng-model="quoteEvent.annualizedGain">
+
+                        </div>
+                        <div class="form-group">
+                            <label translate="stocksmateApp.quoteEvent.holdingsGain">HoldingsGain</label>
+                            <input type="text" class="form-control" name="holdingsGain"
+                                   ng-model="quoteEvent.holdingsGain">
+
+                        </div>
+                        <div class="form-group">
+                            <label translate="stocksmateApp.quoteEvent.holdingsGainPercentRealtime">HoldingsGainPercentRealtime</label>
+                            <input type="text" class="form-control" name="holdingsGainPercentRealtime"
+                                   ng-model="quoteEvent.holdingsGainPercentRealtime">
+
+                        </div>
+                        <div class="form-group">
+                            <label translate="stocksmateApp.quoteEvent.holdingsGainRealtime">HoldingsGainRealtime</label>
+                            <input type="text" class="form-control" name="holdingsGainRealtime"
+                                   ng-model="quoteEvent.holdingsGainRealtime">
+
+                        </div>
+                        <div class="form-group">
+                            <label translate="stocksmateApp.quoteEvent.moreInfo">MoreInfo</label>
+                            <input type="text" class="form-control" name="moreInfo"
+                                   ng-model="quoteEvent.moreInfo">
+
+                        </div>
+                        <div class="form-group">
+                            <label translate="stocksmateApp.quoteEvent.orderBookRealtime">OrderBookRealtime</label>
+                            <input type="text" class="form-control" name="orderBookRealtime"
+                                   ng-model="quoteEvent.orderBookRealtime">
+
+                        </div>
+                        <div class="form-group">
+                            <label translate="stocksmateApp.quoteEvent.marketCapitalization">MarketCapitalization</label>
+                            <input type="text" class="form-control" name="marketCapitalization"
+                                   ng-model="quoteEvent.marketCapitalization">
+
+                        </div>
+                        <div class="form-group">
+                            <label translate="stocksmateApp.quoteEvent.marketCapRealtime">MarketCapRealtime</label>
+                            <input type="text" class="form-control" name="marketCapRealtime"
+                                   ng-model="quoteEvent.marketCapRealtime">
+
+                        </div>
+                        <div class="form-group">
+                            <label translate="stocksmateApp.quoteEvent.eBITDA">EBITDA</label>
+                            <input type="text" class="form-control" name="eBITDA"
+                                   ng-model="quoteEvent.eBITDA">
+
+                        </div>
+                        <div class="form-group">
+                            <label translate="stocksmateApp.quoteEvent.changeFromYearLow">ChangeFromYearLow</label>
+                            <input type="text" class="form-control" name="changeFromYearLow"
+                                   ng-model="quoteEvent.changeFromYearLow">
+
+                        </div>
+                        <div class="form-group">
+                            <label translate="stocksmateApp.quoteEvent.percentChangeFromYearLow">PercentChangeFromYearLow</label>
+                            <input type="text" class="form-control" name="percentChangeFromYearLow"
+                                   ng-model="quoteEvent.percentChangeFromYearLow">
+
+                        </div>
+                        <div class="form-group">
+                            <label translate="stocksmateApp.quoteEvent.lastTradeRealtimeWithTime">LastTradeRealtimeWithTime</label>
+                            <input type="text" class="form-control" name="lastTradeRealtimeWithTime"
+                                   ng-model="quoteEvent.lastTradeRealtimeWithTime">
+
+                        </div>
+                        <div class="form-group">
+                            <label translate="stocksmateApp.quoteEvent.changePercentRealtime">ChangePercentRealtime</label>
+                            <input type="text" class="form-control" name="changePercentRealtime"
+                                   ng-model="quoteEvent.changePercentRealtime">
+
+                        </div>
+                        <div class="form-group">
+                            <label translate="stocksmateApp.quoteEvent.changeFromYearHigh">ChangeFromYearHigh</label>
+                            <input type="text" class="form-control" name="changeFromYearHigh"
+                                   ng-model="quoteEvent.changeFromYearHigh">
+
+                        </div>
+                        <div class="form-group">
+                            <label translate="stocksmateApp.quoteEvent.percebtChangeFromYearHigh">PercebtChangeFromYearHigh</label>
+                            <input type="text" class="form-control" name="percebtChangeFromYearHigh"
+                                   ng-model="quoteEvent.percebtChangeFromYearHigh">
+
+                        </div>
+                        <div class="form-group">
+                            <label translate="stocksmateApp.quoteEvent.lastTradeWithTime">LastTradeWithTime</label>
+                            <input type="text" class="form-control" name="lastTradeWithTime"
+                                   ng-model="quoteEvent.lastTradeWithTime">
+
+                        </div>
+                        <div class="form-group">
+                            <label translate="stocksmateApp.quoteEvent.lastTradePriceOnly">LastTradePriceOnly</label>
+                            <input type="text" class="form-control" name="lastTradePriceOnly"
+                                   ng-model="quoteEvent.lastTradePriceOnly">
+
+                        </div>
+                        <div class="form-group">
+                            <label translate="stocksmateApp.quoteEvent.highLimit">HighLimit</label>
+                            <input type="text" class="form-control" name="highLimit"
+                                   ng-model="quoteEvent.highLimit">
+
+                        </div>
+                        <div class="form-group">
+                            <label translate="stocksmateApp.quoteEvent.lowLimit">LowLimit</label>
+                            <input type="text" class="form-control" name="lowLimit"
+                                   ng-model="quoteEvent.lowLimit">
+
+                        </div>
+                        <div class="form-group">
+                            <label translate="stocksmateApp.quoteEvent.daysRange">DaysRange</label>
+                            <input type="text" class="form-control" name="daysRange"
+                                   ng-model="quoteEvent.daysRange">
+
+                        </div>
+                        <div class="form-group">
+                            <label translate="stocksmateApp.quoteEvent.daysRangeRealtime">DaysRangeRealtime</label>
+                            <input type="text" class="form-control" name="daysRangeRealtime"
+                                   ng-model="quoteEvent.daysRangeRealtime">
+
+                        </div>
+                        <div class="form-group">
+                            <label translate="stocksmateApp.quoteEvent.fiftydayMovingAverage">FiftydayMovingAverage</label>
+                            <input type="text" class="form-control" name="fiftydayMovingAverage"
+                                   ng-model="quoteEvent.fiftydayMovingAverage">
+
+                        </div>
+                        <div class="form-group">
+                            <label translate="stocksmateApp.quoteEvent.twoHundreddayMovingAverage">TwoHundreddayMovingAverage</label>
+                            <input type="text" class="form-control" name="twoHundreddayMovingAverage"
+                                   ng-model="quoteEvent.twoHundreddayMovingAverage">
+
+                        </div>
+                        <div class="form-group">
+                            <label translate="stocksmateApp.quoteEvent.changeFromTwoHundreddayMovingAverage">ChangeFromTwoHundreddayMovingAverage</label>
+                            <input type="text" class="form-control" name="changeFromTwoHundreddayMovingAverage"
+                                   ng-model="quoteEvent.changeFromTwoHundreddayMovingAverage">
+
+                        </div>
+                        <div class="form-group">
+                            <label translate="stocksmateApp.quoteEvent.percentChangeFromTwoHundreddayMovingAverage">PercentChangeFromTwoHundreddayMovingAverage</label>
+                            <input type="text" class="form-control" name="percentChangeFromTwoHundreddayMovingAverage"
+                                   ng-model="quoteEvent.percentChangeFromTwoHundreddayMovingAverage">
+
+                        </div>
+                        <div class="form-group">
+                            <label translate="stocksmateApp.quoteEvent.changeFromFiftydayMovingAverage">ChangeFromFiftydayMovingAverage</label>
+                            <input type="text" class="form-control" name="changeFromFiftydayMovingAverage"
+                                   ng-model="quoteEvent.changeFromFiftydayMovingAverage">
+
+                        </div>
+                        <div class="form-group">
+                            <label translate="stocksmateApp.quoteEvent.percentChangeFromFiftydayMovingAverage">PercentChangeFromFiftydayMovingAverage</label>
+                            <input type="text" class="form-control" name="percentChangeFromFiftydayMovingAverage"
+                                   ng-model="quoteEvent.percentChangeFromFiftydayMovingAverage">
+
+                        </div>
+                        <div class="form-group">
+                            <label translate="stocksmateApp.quoteEvent.name">Name</label>
+                            <input type="text" class="form-control" name="name"
+                                   ng-model="quoteEvent.name">
+
+                        </div>
+                        <div class="form-group">
+                            <label translate="stocksmateApp.quoteEvent.notes">Notes</label>
+                            <input type="text" class="form-control" name="notes"
+                                   ng-model="quoteEvent.notes">
+
+                        </div>
+                        <div class="form-group">
+                            <label translate="stocksmateApp.quoteEvent.open">Open</label>
+                            <input type="text" class="form-control" name="open"
+                                   ng-model="quoteEvent.open">
+
+                        </div>
+                        <div class="form-group">
+                            <label translate="stocksmateApp.quoteEvent.previousClose">PreviousClose</label>
+                            <input type="text" class="form-control" name="previousClose"
+                                   ng-model="quoteEvent.previousClose">
+
+                        </div>
+                        <div class="form-group">
+                            <label translate="stocksmateApp.quoteEvent.pricePaid">PricePaid</label>
+                            <input type="text" class="form-control" name="pricePaid"
+                                   ng-model="quoteEvent.pricePaid">
+
+                        </div>
+                        <div class="form-group">
+                            <label translate="stocksmateApp.quoteEvent.changeinPercent">ChangeinPercent</label>
+                            <input type="text" class="form-control" name="changeinPercent"
+                                   ng-model="quoteEvent.changeinPercent">
+
+                        </div>
+                        <div class="form-group">
+                            <label translate="stocksmateApp.quoteEvent.priceSales">PriceSales</label>
+                            <input type="text" class="form-control" name="priceSales"
+                                   ng-model="quoteEvent.priceSales">
+
+                        </div>
+                        <div class="form-group">
+                            <label translate="stocksmateApp.quoteEvent.priceBook">PriceBook</label>
+                            <input type="text" class="form-control" name="priceBook"
+                                   ng-model="quoteEvent.priceBook">
+
+                        </div>
+                        <div class="form-group">
+                            <label translate="stocksmateApp.quoteEvent.exDividendDate">ExDividendDate</label>
+                            <input type="text" class="form-control" name="exDividendDate"
+                                   ng-model="quoteEvent.exDividendDate">
+
+                        </div>
+                        <div class="form-group">
+                            <label translate="stocksmateApp.quoteEvent.pERatio">PERatio</label>
+                            <input type="text" class="form-control" name="pERatio"
+                                   ng-model="quoteEvent.pERatio">
+
+                        </div>
+                        <div class="form-group">
+                            <label translate="stocksmateApp.quoteEvent.dividendPayDate">DividendPayDate</label>
+                            <input type="text" class="form-control" name="dividendPayDate"
+                                   ng-model="quoteEvent.dividendPayDate">
+
+                        </div>
+                        <div class="form-group">
+                            <label translate="stocksmateApp.quoteEvent.pERatioRealtime">PERatioRealtime</label>
+                            <input type="text" class="form-control" name="pERatioRealtime"
+                                   ng-model="quoteEvent.pERatioRealtime">
+
+                        </div>
+                        <div class="form-group">
+                            <label translate="stocksmateApp.quoteEvent.pEGRatio">PEGRatio</label>
+                            <input type="text" class="form-control" name="pEGRatio"
+                                   ng-model="quoteEvent.pEGRatio">
+
+                        </div>
+                        <div class="form-group">
+                            <label translate="stocksmateApp.quoteEvent.priceEPSEstimateCurrentYear">PriceEPSEstimateCurrentYear</label>
+                            <input type="text" class="form-control" name="priceEPSEstimateCurrentYear"
+                                   ng-model="quoteEvent.priceEPSEstimateCurrentYear">
+
+                        </div>
+                        <div class="form-group">
+                            <label translate="stocksmateApp.quoteEvent.priceEPSEstimateNextYear">PriceEPSEstimateNextYear</label>
+                            <input type="text" class="form-control" name="priceEPSEstimateNextYear"
+                                   ng-model="quoteEvent.priceEPSEstimateNextYear">
+
+                        </div>
+                        <div class="form-group">
+                            <label translate="stocksmateApp.quoteEvent.symbol">Symbol</label>
+                            <input type="text" class="form-control" name="symbol"
+                                   ng-model="quoteEvent.symbol" required>
+
+                            <div ng-show="editForm.symbol.$invalid">
+                                <p class="help-block"
+                                   ng-show="editForm.symbol.$error.required" translate="entity.validation.required">
+                                    This field is required.
+                                </p>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label translate="stocksmateApp.quoteEvent.sharesOwned">SharesOwned</label>
+                            <input type="text" class="form-control" name="sharesOwned"
+                                   ng-model="quoteEvent.sharesOwned">
+
+                        </div>
+                        <div class="form-group">
+                            <label translate="stocksmateApp.quoteEvent.shortRatio">ShortRatio</label>
+                            <input type="text" class="form-control" name="shortRatio"
+                                   ng-model="quoteEvent.shortRatio">
+
+                        </div>
+                        <div class="form-group">
+                            <label translate="stocksmateApp.quoteEvent.lastTradeTime">LastTradeTime</label>
+                            <input type="text" class="form-control" name="lastTradeTime"
+                                   ng-model="quoteEvent.lastTradeTime">
+
+                        </div>
+                        <div class="form-group">
+                            <label translate="stocksmateApp.quoteEvent.tickerTrend">TickerTrend</label>
+                            <input type="text" class="form-control" name="tickerTrend"
+                                   ng-model="quoteEvent.tickerTrend">
+
+                        </div>
+                        <div class="form-group">
+                            <label translate="stocksmateApp.quoteEvent.oneyrTargetPrice">OneyrTargetPrice</label>
+                            <input type="text" class="form-control" name="oneyrTargetPrice"
+                                   ng-model="quoteEvent.oneyrTargetPrice">
+
+                        </div>
+                        <div class="form-group">
+                            <label translate="stocksmateApp.quoteEvent.volume">Volume</label>
+                            <input type="text" class="form-control" name="volume"
+                                   ng-model="quoteEvent.volume">
+
+                        </div>
+                        <div class="form-group">
+                            <label translate="stocksmateApp.quoteEvent.holdingsValue">HoldingsValue</label>
+                            <input type="text" class="form-control" name="holdingsValue"
+                                   ng-model="quoteEvent.holdingsValue">
+
+                        </div>
+                        <div class="form-group">
+                            <label translate="stocksmateApp.quoteEvent.holdingsValueRealtime">HoldingsValueRealtime</label>
+                            <input type="text" class="form-control" name="holdingsValueRealtime"
+                                   ng-model="quoteEvent.holdingsValueRealtime">
+
+                        </div>
+                        <div class="form-group">
+                            <label translate="stocksmateApp.quoteEvent.yearRange">YearRange</label>
+                            <input type="text" class="form-control" name="yearRange"
+                                   ng-model="quoteEvent.yearRange">
+
+                        </div>
+                        <div class="form-group">
+                            <label translate="stocksmateApp.quoteEvent.daysValueChange">DaysValueChange</label>
+                            <input type="text" class="form-control" name="daysValueChange"
+                                   ng-model="quoteEvent.daysValueChange">
+
+                        </div>
+                        <div class="form-group">
+                            <label translate="stocksmateApp.quoteEvent.daysValueChangeRealtime">DaysValueChangeRealtime</label>
+                            <input type="text" class="form-control" name="daysValueChangeRealtime"
+                                   ng-model="quoteEvent.daysValueChangeRealtime">
+
+                        </div>
+                        <div class="form-group">
+                            <label translate="stocksmateApp.quoteEvent.stockExchange">StockExchange</label>
+                            <input type="text" class="form-control" name="stockExchange"
+                                   ng-model="quoteEvent.stockExchange">
+
+                        </div>
+                        <div class="form-group">
+                            <label translate="stocksmateApp.quoteEvent.dividendYield">DividendYield</label>
+                            <input type="text" class="form-control" name="dividendYield"
+                                   ng-model="quoteEvent.dividendYield">
+
+                        </div>
+                        <div class="form-group">
+                            <label translate="stocksmateApp.quoteEvent.percentChange">PercentChange</label>
+                            <input type="text" class="form-control" name="percentChange"
+                                   ng-model="quoteEvent.percentChange">
+
+                        </div>
+
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-default" data-dismiss="modal" ng-click="clear()">
+                            <span class="glyphicon glyphicon-ban-circle"></span>&nbsp;<span translate="entity.action.cancel">Cancel</span>
+                        </button>
+                        <button type="submit" ng-disabled="editForm.$invalid" class="btn btn-primary">
+                            <span class="glyphicon glyphicon-save"></span>&nbsp;<span translate="entity.action.save">Save</span>
+                        </button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal fade" id="deleteQuoteEventConfirmation">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <form name="deleteForm" ng-submit="confirmDelete(quoteEvent.id)">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal" aria-hidden="true"
+                                ng-click="clear()">&times;</button>
+                        <h4 class="modal-title" translate="entity.delete.title">Confirm delete operation</h4>
+                    </div>
+                    <div class="modal-body">
+                        <p translate="stocksmateApp.quoteEvent.delete.question" translate-values="{id: '{{quoteEvent.id}}'}">Are you sure you want to delete this QuoteEvent?</p>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-default" data-dismiss="modal" ng-click="clear()">
+                            <span class="glyphicon glyphicon-ban-circle"></span>&nbsp;<span translate="entity.action.cancel">Cancel</span>
+                        </button>
+                        <button type="submit" ng-disabled="deleteForm.$invalid" class="btn btn-danger">
+                            <span class="glyphicon glyphicon-remove-circle"></span>&nbsp;<span translate="entity.action.delete">Delete</span>
+                        </button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <div class="table-responsive">
+        <table class="table table-striped">
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th translate="stocksmateApp.quoteEvent.ask">Ask</th>
+                    <th translate="stocksmateApp.quoteEvent.averageDailyVolume">AverageDailyVolume</th>
+                    <th translate="stocksmateApp.quoteEvent.bid">Bid</th>
+                    <th translate="stocksmateApp.quoteEvent.askRealtime">AskRealtime</th>
+                    <th translate="stocksmateApp.quoteEvent.bidRealtime">BidRealtime</th>
+                    <th translate="stocksmateApp.quoteEvent.bookValue">BookValue</th>
+                    <th translate="stocksmateApp.quoteEvent.change_PercentChange">Change_PercentChange</th>
+                    <th translate="stocksmateApp.quoteEvent.change">Change</th>
+                    <th translate="stocksmateApp.quoteEvent.commission">Commission</th>
+                    <th translate="stocksmateApp.quoteEvent.currency">Currency</th>
+                    <th translate="stocksmateApp.quoteEvent.changeRealtime">ChangeRealtime</th>
+                    <th translate="stocksmateApp.quoteEvent.afterHoursChangeRealtime">AfterHoursChangeRealtime</th>
+                    <th translate="stocksmateApp.quoteEvent.dividendShare">DividendShare</th>
+                    <th translate="stocksmateApp.quoteEvent.lastTradeDate">LastTradeDate</th>
+                    <th translate="stocksmateApp.quoteEvent.tradeDate">TradeDate</th>
+                    <th translate="stocksmateApp.quoteEvent.earningsShare">EarningsShare</th>
+                    <th translate="stocksmateApp.quoteEvent.errorIndicationreturnedforsymbolchangedinvalid">ErrorIndicationreturnedforsymbolchangedinvalid</th>
+                    <th translate="stocksmateApp.quoteEvent.ePSEstimateCurrentYear">EPSEstimateCurrentYear</th>
+                    <th translate="stocksmateApp.quoteEvent.ePSEstimateNextYear">EPSEstimateNextYear</th>
+                    <th translate="stocksmateApp.quoteEvent.ePSEstimateNextQuarter">EPSEstimateNextQuarter</th>
+                    <th translate="stocksmateApp.quoteEvent.daysLow">DaysLow</th>
+                    <th translate="stocksmateApp.quoteEvent.daysHigh">DaysHigh</th>
+                    <th translate="stocksmateApp.quoteEvent.yearLow">YearLow</th>
+                    <th translate="stocksmateApp.quoteEvent.yearHigh">YearHigh</th>
+                    <th translate="stocksmateApp.quoteEvent.holdingsGainPercent">HoldingsGainPercent</th>
+                    <th translate="stocksmateApp.quoteEvent.annualizedGain">AnnualizedGain</th>
+                    <th translate="stocksmateApp.quoteEvent.holdingsGain">HoldingsGain</th>
+                    <th translate="stocksmateApp.quoteEvent.holdingsGainPercentRealtime">HoldingsGainPercentRealtime</th>
+                    <th translate="stocksmateApp.quoteEvent.holdingsGainRealtime">HoldingsGainRealtime</th>
+                    <th translate="stocksmateApp.quoteEvent.moreInfo">MoreInfo</th>
+                    <th translate="stocksmateApp.quoteEvent.orderBookRealtime">OrderBookRealtime</th>
+                    <th translate="stocksmateApp.quoteEvent.marketCapitalization">MarketCapitalization</th>
+                    <th translate="stocksmateApp.quoteEvent.marketCapRealtime">MarketCapRealtime</th>
+                    <th translate="stocksmateApp.quoteEvent.eBITDA">EBITDA</th>
+                    <th translate="stocksmateApp.quoteEvent.changeFromYearLow">ChangeFromYearLow</th>
+                    <th translate="stocksmateApp.quoteEvent.percentChangeFromYearLow">PercentChangeFromYearLow</th>
+                    <th translate="stocksmateApp.quoteEvent.lastTradeRealtimeWithTime">LastTradeRealtimeWithTime</th>
+                    <th translate="stocksmateApp.quoteEvent.changePercentRealtime">ChangePercentRealtime</th>
+                    <th translate="stocksmateApp.quoteEvent.changeFromYearHigh">ChangeFromYearHigh</th>
+                    <th translate="stocksmateApp.quoteEvent.percebtChangeFromYearHigh">PercebtChangeFromYearHigh</th>
+                    <th translate="stocksmateApp.quoteEvent.lastTradeWithTime">LastTradeWithTime</th>
+                    <th translate="stocksmateApp.quoteEvent.lastTradePriceOnly">LastTradePriceOnly</th>
+                    <th translate="stocksmateApp.quoteEvent.highLimit">HighLimit</th>
+                    <th translate="stocksmateApp.quoteEvent.lowLimit">LowLimit</th>
+                    <th translate="stocksmateApp.quoteEvent.daysRange">DaysRange</th>
+                    <th translate="stocksmateApp.quoteEvent.daysRangeRealtime">DaysRangeRealtime</th>
+                    <th translate="stocksmateApp.quoteEvent.fiftydayMovingAverage">FiftydayMovingAverage</th>
+                    <th translate="stocksmateApp.quoteEvent.twoHundreddayMovingAverage">TwoHundreddayMovingAverage</th>
+                    <th translate="stocksmateApp.quoteEvent.changeFromTwoHundreddayMovingAverage">ChangeFromTwoHundreddayMovingAverage</th>
+                    <th translate="stocksmateApp.quoteEvent.percentChangeFromTwoHundreddayMovingAverage">PercentChangeFromTwoHundreddayMovingAverage</th>
+                    <th translate="stocksmateApp.quoteEvent.changeFromFiftydayMovingAverage">ChangeFromFiftydayMovingAverage</th>
+                    <th translate="stocksmateApp.quoteEvent.percentChangeFromFiftydayMovingAverage">PercentChangeFromFiftydayMovingAverage</th>
+                    <th translate="stocksmateApp.quoteEvent.name">Name</th>
+                    <th translate="stocksmateApp.quoteEvent.notes">Notes</th>
+                    <th translate="stocksmateApp.quoteEvent.open">Open</th>
+                    <th translate="stocksmateApp.quoteEvent.previousClose">PreviousClose</th>
+                    <th translate="stocksmateApp.quoteEvent.pricePaid">PricePaid</th>
+                    <th translate="stocksmateApp.quoteEvent.changeinPercent">ChangeinPercent</th>
+                    <th translate="stocksmateApp.quoteEvent.priceSales">PriceSales</th>
+                    <th translate="stocksmateApp.quoteEvent.priceBook">PriceBook</th>
+                    <th translate="stocksmateApp.quoteEvent.exDividendDate">ExDividendDate</th>
+                    <th translate="stocksmateApp.quoteEvent.pERatio">PERatio</th>
+                    <th translate="stocksmateApp.quoteEvent.dividendPayDate">DividendPayDate</th>
+                    <th translate="stocksmateApp.quoteEvent.pERatioRealtime">PERatioRealtime</th>
+                    <th translate="stocksmateApp.quoteEvent.pEGRatio">PEGRatio</th>
+                    <th translate="stocksmateApp.quoteEvent.priceEPSEstimateCurrentYear">PriceEPSEstimateCurrentYear</th>
+                    <th translate="stocksmateApp.quoteEvent.priceEPSEstimateNextYear">PriceEPSEstimateNextYear</th>
+                    <th translate="stocksmateApp.quoteEvent.symbol">Symbol</th>
+                    <th translate="stocksmateApp.quoteEvent.sharesOwned">SharesOwned</th>
+                    <th translate="stocksmateApp.quoteEvent.shortRatio">ShortRatio</th>
+                    <th translate="stocksmateApp.quoteEvent.lastTradeTime">LastTradeTime</th>
+                    <th translate="stocksmateApp.quoteEvent.tickerTrend">TickerTrend</th>
+                    <th translate="stocksmateApp.quoteEvent.oneyrTargetPrice">OneyrTargetPrice</th>
+                    <th translate="stocksmateApp.quoteEvent.volume">Volume</th>
+                    <th translate="stocksmateApp.quoteEvent.holdingsValue">HoldingsValue</th>
+                    <th translate="stocksmateApp.quoteEvent.holdingsValueRealtime">HoldingsValueRealtime</th>
+                    <th translate="stocksmateApp.quoteEvent.yearRange">YearRange</th>
+                    <th translate="stocksmateApp.quoteEvent.daysValueChange">DaysValueChange</th>
+                    <th translate="stocksmateApp.quoteEvent.daysValueChangeRealtime">DaysValueChangeRealtime</th>
+                    <th translate="stocksmateApp.quoteEvent.stockExchange">StockExchange</th>
+                    <th translate="stocksmateApp.quoteEvent.dividendYield">DividendYield</th>
+                    <th translate="stocksmateApp.quoteEvent.percentChange">PercentChange</th>
+                    <th></th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr ng-repeat="quoteEvent in quoteEvents">
+                    <td><a ui-sref="quoteEventDetail({id:quoteEvent.id})">{{quoteEvent.id}}</a></td>
+                    <td>{{quoteEvent.ask}}</td>
+                    <td>{{quoteEvent.averageDailyVolume}}</td>
+                    <td>{{quoteEvent.bid}}</td>
+                    <td>{{quoteEvent.askRealtime}}</td>
+                    <td>{{quoteEvent.bidRealtime}}</td>
+                    <td>{{quoteEvent.bookValue}}</td>
+                    <td>{{quoteEvent.change_PercentChange}}</td>
+                    <td>{{quoteEvent.change}}</td>
+                    <td>{{quoteEvent.commission}}</td>
+                    <td>{{quoteEvent.currency}}</td>
+                    <td>{{quoteEvent.changeRealtime}}</td>
+                    <td>{{quoteEvent.afterHoursChangeRealtime}}</td>
+                    <td>{{quoteEvent.dividendShare}}</td>
+                    <td>{{quoteEvent.lastTradeDate}}</td>
+                    <td>{{quoteEvent.tradeDate}}</td>
+                    <td>{{quoteEvent.earningsShare}}</td>
+                    <td>{{quoteEvent.errorIndicationreturnedforsymbolchangedinvalid}}</td>
+                    <td>{{quoteEvent.ePSEstimateCurrentYear}}</td>
+                    <td>{{quoteEvent.ePSEstimateNextYear}}</td>
+                    <td>{{quoteEvent.ePSEstimateNextQuarter}}</td>
+                    <td>{{quoteEvent.daysLow}}</td>
+                    <td>{{quoteEvent.daysHigh}}</td>
+                    <td>{{quoteEvent.yearLow}}</td>
+                    <td>{{quoteEvent.yearHigh}}</td>
+                    <td>{{quoteEvent.holdingsGainPercent}}</td>
+                    <td>{{quoteEvent.annualizedGain}}</td>
+                    <td>{{quoteEvent.holdingsGain}}</td>
+                    <td>{{quoteEvent.holdingsGainPercentRealtime}}</td>
+                    <td>{{quoteEvent.holdingsGainRealtime}}</td>
+                    <td>{{quoteEvent.moreInfo}}</td>
+                    <td>{{quoteEvent.orderBookRealtime}}</td>
+                    <td>{{quoteEvent.marketCapitalization}}</td>
+                    <td>{{quoteEvent.marketCapRealtime}}</td>
+                    <td>{{quoteEvent.eBITDA}}</td>
+                    <td>{{quoteEvent.changeFromYearLow}}</td>
+                    <td>{{quoteEvent.percentChangeFromYearLow}}</td>
+                    <td>{{quoteEvent.lastTradeRealtimeWithTime}}</td>
+                    <td>{{quoteEvent.changePercentRealtime}}</td>
+                    <td>{{quoteEvent.changeFromYearHigh}}</td>
+                    <td>{{quoteEvent.percebtChangeFromYearHigh}}</td>
+                    <td>{{quoteEvent.lastTradeWithTime}}</td>
+                    <td>{{quoteEvent.lastTradePriceOnly}}</td>
+                    <td>{{quoteEvent.highLimit}}</td>
+                    <td>{{quoteEvent.lowLimit}}</td>
+                    <td>{{quoteEvent.daysRange}}</td>
+                    <td>{{quoteEvent.daysRangeRealtime}}</td>
+                    <td>{{quoteEvent.fiftydayMovingAverage}}</td>
+                    <td>{{quoteEvent.twoHundreddayMovingAverage}}</td>
+                    <td>{{quoteEvent.changeFromTwoHundreddayMovingAverage}}</td>
+                    <td>{{quoteEvent.percentChangeFromTwoHundreddayMovingAverage}}</td>
+                    <td>{{quoteEvent.changeFromFiftydayMovingAverage}}</td>
+                    <td>{{quoteEvent.percentChangeFromFiftydayMovingAverage}}</td>
+                    <td>{{quoteEvent.name}}</td>
+                    <td>{{quoteEvent.notes}}</td>
+                    <td>{{quoteEvent.open}}</td>
+                    <td>{{quoteEvent.previousClose}}</td>
+                    <td>{{quoteEvent.pricePaid}}</td>
+                    <td>{{quoteEvent.changeinPercent}}</td>
+                    <td>{{quoteEvent.priceSales}}</td>
+                    <td>{{quoteEvent.priceBook}}</td>
+                    <td>{{quoteEvent.exDividendDate}}</td>
+                    <td>{{quoteEvent.pERatio}}</td>
+                    <td>{{quoteEvent.dividendPayDate}}</td>
+                    <td>{{quoteEvent.pERatioRealtime}}</td>
+                    <td>{{quoteEvent.pEGRatio}}</td>
+                    <td>{{quoteEvent.priceEPSEstimateCurrentYear}}</td>
+                    <td>{{quoteEvent.priceEPSEstimateNextYear}}</td>
+                    <td>{{quoteEvent.symbol}}</td>
+                    <td>{{quoteEvent.sharesOwned}}</td>
+                    <td>{{quoteEvent.shortRatio}}</td>
+                    <td>{{quoteEvent.lastTradeTime}}</td>
+                    <td>{{quoteEvent.tickerTrend}}</td>
+                    <td>{{quoteEvent.oneyrTargetPrice}}</td>
+                    <td>{{quoteEvent.volume}}</td>
+                    <td>{{quoteEvent.holdingsValue}}</td>
+                    <td>{{quoteEvent.holdingsValueRealtime}}</td>
+                    <td>{{quoteEvent.yearRange}}</td>
+                    <td>{{quoteEvent.daysValueChange}}</td>
+                    <td>{{quoteEvent.daysValueChangeRealtime}}</td>
+                    <td>{{quoteEvent.stockExchange}}</td>
+                    <td>{{quoteEvent.dividendYield}}</td>
+                    <td>{{quoteEvent.percentChange}}</td>
+                    <td>
+                        <button type="submit"
+                                ui-sref="quoteEventDetail({id:quoteEvent.id})"
+                                class="btn btn-info btn-sm">
+                            <span class="glyphicon glyphicon-eye-open"></span>&nbsp;<span translate="entity.action.view"> View</span>
+                        </button>
+                        <button type="submit"
+                                ng-click="showUpdate(quoteEvent.id)"
+                                class="btn btn-primary btn-sm">
+                            <span class="glyphicon glyphicon-pencil"></span>&nbsp;<span translate="entity.action.edit"> Edit</span>
+                        </button>
+                        <button type="submit"
+                                ng-click="delete(quoteEvent.id)"
+                                class="btn btn-danger btn-sm">
+                            <span class="glyphicon glyphicon-remove-circle"></span>&nbsp;<span translate="entity.action.delete"> Delete</span>
+                        </button>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <nav>
+            <ul class="pagination">
+                <li ng-show="links['first']" ng-click="loadPage(links['first'])"><a>&lt;&lt;</a></li>
+                <li ng-show="links['prev']" ng-click="loadPage(links['prev'])"><a>&lt;</a></li>
+                <li ng-show="page > 2" ng-click="loadPage(page - 2)"><a>{{page - 2}}</a></li>
+                <li ng-show="page > 1" ng-click="loadPage(page - 1)"><a>{{page - 1}}</a></li>
+                <li class="active"><a>{{page}}</a></li>
+                <li ng-show="page < links['last']" ng-click="loadPage(page + 1)"><a>{{page + 1}}</a></li>
+                <li ng-show="page < links['last'] - 1" ng-click="loadPage(page + 2)"><a>{{page + 2}}</a></li>
+                <li ng-show="links['next']" ng-click="loadPage(links['next'])"><a>&gt;</a></li>
+                <li ng-show="links['last']" ng-click="loadPage(links['last'])"><a>&gt;&gt;</a></li>
+            </ul>
+        </nav>
+    </div>
+</div>

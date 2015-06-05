@@ -1,0 +1,20 @@
+{
+  "generator-jhipster": {
+    "baseName": "stocksmate",
+    "packageName": "com.twimba.stocksmate",
+    "packageFolder": "com/twimba/stocksmate",
+    "authenticationType": "session",
+    "hibernateCache": "ehcache",
+    "clusteredHttpSession": "no",
+    "websocket": "spring-websocket",
+    "databaseType": "sql",
+    "devDatabaseType": "h2Memory",
+    "prodDatabaseType": "mysql",
+    "searchEngine": "elasticsearch",
+    "useCompass": false,
+    "buildTool": "maven",
+    "frontendBuilder": "grunt",
+    "javaVersion": "8",
+    "rememberMeKey": "eccacf66b9651ee9d43d4297a4f68a6cf7c731c3"
+  }
+}

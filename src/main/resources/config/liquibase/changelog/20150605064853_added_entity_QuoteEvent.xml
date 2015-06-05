@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<databaseChangeLog
+    xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.1.xsd">
+
+    <property name="now" value="now()" dbms="mysql,h2"/>
+    <property name="now" value="current_timestamp" dbms="postgresql"/>
+
+    <!--
+        Added the entity QuoteEvent.
+    -->
+    <changeSet id="20150605064853" author="jhipster">
+        <createTable tableName="QUOTEEVENT">
+            <column name="id" type="bigint" autoIncrement="true">
+                <constraints primaryKey="true" nullable="false"/>
+            </column>
+            <column name="ask" type="decimal(10,2)"/>
+            <column name="average_daily_volume" type="varchar(255)"/>
+            <column name="bid" type="varchar(255)"/>
+            <column name="ask_realtime" type="varchar(255)"/>
+            <column name="bid_realtime" type="varchar(255)"/>
+            <column name="book_value" type="varchar(255)"/>
+            <column name="change_percent_change" type="varchar(255)"/>
+            <column name="change" type="decimal(10,2)"/>
+            <column name="commission" type="varchar(255)"/>
+            <column name="currency" type="varchar(255)"/>
+            <column name="change_realtime" type="varchar(255)"/>
+            <column name="after_hours_change_realtime" type="varchar(255)"/>
+            <column name="dividend_share" type="varchar(255)"/>
+            <column name="last_trade_date" type="varchar(255)"/>
+            <column name="trade_date" type="varchar(255)"/>
+            <column name="earnings_share" type="varchar(255)"/>
+            <column name="error_indicationreturnedforsymbolchangedinvalid" type="varchar(255)"/>
+            <column name="e_p_s_estimate_current_year" type="varchar(255)"/>
+            <column name="e_p_s_estimate_next_year" type="varchar(255)"/>
+            <column name="e_p_s_estimate_next_quarter" type="varchar(255)"/>
+            <column name="days_low" type="varchar(255)"/>
+            <column name="days_high" type="varchar(255)"/>
+            <column name="year_low" type="varchar(255)"/>
+            <column name="year_high" type="varchar(255)"/>
+            <column name="holdings_gain_percent" type="varchar(255)"/>
+            <column name="annualized_gain" type="varchar(255)"/>
+            <column name="holdings_gain" type="varchar(255)"/>
+            <column name="holdings_gain_percent_realtime" type="varchar(255)"/>
+            <column name="holdings_gain_realtime" type="varchar(255)"/>
+            <column name="more_info" type="varchar(255)"/>
+            <column name="order_book_realtime" type="varchar(255)"/>
+            <column name="market_capitalization" type="varchar(255)"/>
+            <column name="market_cap_realtime" type="varchar(255)"/>
+            <column name="ebitda" type="varchar(255)"/>
+            <column name="change_from_year_low" type="varchar(255)"/>
+            <column name="percent_change_from_year_low" type="varchar(255)"/>
+            <column name="last_trade_realtime_with_time" type="varchar(255)"/>
+            <column name="change_percent_realtime" type="varchar(255)"/>
+            <column name="change_from_year_high" type="varchar(255)"/>
+            <column name="percebt_change_from_year_high" type="varchar(255)"/>
+            <column name="last_trade_with_time" type="varchar(255)"/>
+            <column name="last_trade_price_only" type="varchar(255)"/>
+            <column name="high_limit" type="varchar(255)"/>
+            <column name="low_limit" type="varchar(255)"/>
+            <column name="days_range" type="varchar(255)"/>
+            <column name="days_range_realtime" type="varchar(255)"/>
+            <column name="fiftyday_moving_average" type="varchar(255)"/>
+            <column name="two_hundredday_moving_average" type="varchar(255)"/>
+            <column name="change_from_two_hundredday_moving_average" type="varchar(255)"/>
+            <column name="percent_change_from_two_hundredday_moving_average" type="varchar(255)"/>
+            <column name="change_from_fiftyday_moving_average" type="varchar(255)"/>
+            <column name="percent_change_from_fiftyday_moving_average" type="varchar(255)"/>
+            <column name="name" type="varchar(255)"/>
+            <column name="notes" type="varchar(255)"/>
+            <column name="open" type="varchar(255)"/>
+            <column name="previous_close" type="varchar(255)"/>
+            <column name="price_paid" type="varchar(255)"/>
+            <column name="changein_percent" type="varchar(255)"/>
+            <column name="price_sales" type="varchar(255)"/>
+            <column name="price_book" type="varchar(255)"/>
+            <column name="ex_dividend_date" type="varchar(255)"/>
+            <column name="p_e_ratio" type="varchar(255)"/>
+            <column name="dividend_pay_date" type="varchar(255)"/>
+            <column name="p_e_ratio_realtime" type="varchar(255)"/>
+            <column name="p_e_g_ratio" type="varchar(255)"/>
+            <column name="price_e_p_s_estimate_current_year" type="varchar(255)"/>
+            <column name="price_e_p_s_estimate_next_year" type="varchar(255)"/>
+            <column name="symbol" type="varchar(255)">
+                <constraints nullable="false" />
+            </column>
+            <column name="shares_owned" type="varchar(255)"/>
+            <column name="short_ratio" type="varchar(255)"/>
+            <column name="last_trade_time" type="varchar(255)"/>
+            <column name="ticker_trend" type="varchar(255)"/>
+            <column name="oneyr_target_price" type="varchar(255)"/>
+            <column name="volume" type="varchar(255)"/>
+            <column name="holdings_value" type="varchar(255)"/>
+            <column name="holdings_value_realtime" type="varchar(255)"/>
+            <column name="year_range" type="varchar(255)"/>
+            <column name="days_value_change" type="varchar(255)"/>
+            <column name="days_value_change_realtime" type="varchar(255)"/>
+            <column name="stock_exchange" type="varchar(255)"/>
+            <column name="dividend_yield" type="varchar(255)"/>
+            <column name="percent_change" type="varchar(255)"/>
+        </createTable>
+        
+    </changeSet>
+</databaseChangeLog>
