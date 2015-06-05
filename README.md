@@ -1,8 +1,7 @@
-# stock-processing
-A simple stock ticker processing with spring boot, apache camel and esper Complex Event Processing platform
+# stocks mate
 
-# howto
-1) edit application.properties files if needed
 
-2) mvn spring-boot:run
-
+## How to 
+```
+mvn spring-boot:run
+``
